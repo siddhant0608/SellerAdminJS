@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller's Admin Page</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form onsubmit="saveToCrud(event)">
+            <h1 style="color: crimson; text-align: center;">Seller's Admin Page</h1>
+            <label for="price">Selling price:</label>
+            <input type="number" min="1" id="price" name="price" required>
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required>
+            <button type="submit">Add Product</button>
+            <h1>Products</h1>
+            <ul id="productList"></ul>
+            <div id="totalValue">
+                <h2>Total Value Worth of Products: ₹0.00</h2>
+            </div>
+        </form>
+    </fieldset>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
